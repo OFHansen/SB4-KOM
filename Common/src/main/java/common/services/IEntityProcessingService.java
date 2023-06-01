@@ -10,7 +10,7 @@ public interface IEntityProcessingService {
      * @param gameData Contains time since last update, display width and height,
      * @param world Contains all the entities and vector data needed to draw the world on the client.
      *
-     * The process method is called at the end of every game loop.
+     * The process method is called at the start of every game loop.
      *
      */
 
