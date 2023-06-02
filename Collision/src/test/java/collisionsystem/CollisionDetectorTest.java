@@ -12,10 +12,12 @@ class CollisionDetectorTest {
     //Arrange
     private Entity testEntity1;
     private Entity testEntity2;
+    private CollisionDetector collisionDetector;
 
     @BeforeEach
     void setUp(){
         //Arrange
+        collisionDetector = new CollisionDetector();
         testEntity1 = new Entity();
         testEntity2 = new Entity();
 
@@ -31,7 +33,7 @@ class CollisionDetectorTest {
         testEntity2.add(new PositionPart(100,139,0));
 
         //Assert
-        assertTrue(CollisionDetector.isColliding(testEntity1,testEntity2));
+        assertTrue(collisionDetector.isColliding(testEntity1,testEntity2));
     }
 
     @Test
@@ -40,7 +42,7 @@ class CollisionDetectorTest {
         testEntity2.add(new PositionPart(100,140,0));
 
         //Assert
-        assertFalse(CollisionDetector.isColliding(testEntity1,testEntity2));
+        assertFalse(collisionDetector.isColliding(testEntity1,testEntity2));
     }
 
 }
